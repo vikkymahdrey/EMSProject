@@ -53,9 +53,10 @@ public class EMSDaoImpl extends AbstractDao implements EMSDao {
 
 	
 	public EmsVotorData getEMSAuthCode(String code) throws Exception {
-		String query="from EmsVotorData where authCode=:authCode";
+		System.out.println("codeeee"+code);
+		String query="from EmsVotorData where authCode='"+code+"'";
 		Query q=getEntityManager().createQuery(query);
-			q.setParameter("authCode", Integer.valueOf(code));
+			//q.setParameter("authCode", Integer.valueOf(code));
 				List<EmsVotorData> emsList=q.getResultList();
 				if(emsList!=null && !emsList.isEmpty()){
 					return emsList.get(0);

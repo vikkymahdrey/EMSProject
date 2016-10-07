@@ -7,7 +7,6 @@
 <head>
 <title>Election Management System</title>
 
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -34,7 +33,7 @@ function LoadMyJs() {
 
 
 
-/* function validate() {
+ function validate() {
 	var code = document.getElementById("code").value;
 	if (code == null || code == "") {
 		alert("Invalid auth code");
@@ -42,7 +41,7 @@ function LoadMyJs() {
 	} else{
     	return true;
     }
-    */
+    
 } 
 </script>
 </head>
@@ -89,7 +88,7 @@ function LoadMyJs() {
 				
 			</div>
 			<div class="col-lg-10">
-			<input type="text"  class="form-control" name="code" id="code" maxlength="6" pattern="\d[0-6]" title="Invalid auth code.">
+			<input type="text"  class="form-control" name="code" id="code" >
 			</div>
 			
 		</div>

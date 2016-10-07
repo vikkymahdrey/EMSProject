@@ -211,7 +211,7 @@ function updateEMSAjax(votorId){
 			<div class="col-xs-4">		
 				<label for="example-text-input" class="col-xs-4 col-form-label">Voter Icon</label>
 				<div class="col-xs-8">
-				<a href="getImage?Id="+<%=ems.getId()%>> > Votor Image</a> 
+				<a href="getImage?Id="+<%=ems.getId()%>>Votor Image</a> 
 				<!-- <a href="getImage" > Votor Image<img src="images/boynoshow.png" height="150px" width="150px" /></a>  -->
 			 <%-- <a href="${pageContext.request.contextPath}/getVoterIcon/"+<%=ems.getVoterICON()%> > Votor Image</a>  --%>
 			<%--  <img src="{pageContext.request.contextPath}/retrivingEmsInfo/myImage/getVoterIcon" height="150px" width="150px" /> 
@@ -231,12 +231,26 @@ function updateEMSAjax(votorId){
 				<label for="example-text-input" class="col-xs-4 col-form-label">Pro-Voter</label>
 				<div class="col-xs-8">
 				<%if(ems.getProVoter().equalsIgnoreCase("Y")){%>
+				<div class="col-xs-8">
 					<label class="radio-inline">
 						<input type="radio" name="radiobtn" id="radiobtn1" value="<%=ems.getProVoter() %>" checked> Yes
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="radiobtn" id="radiobtn1" value="" > No
+						<input type="radio" name="radiobtn" id="radiobtn2" value="" > No
 					</label>
+				</div>	
+					<div id="yesProbox" style="margin-left:-85px;">
+						<label><input type="radio"  name="provoteryes" id="pm" value=""> PM </label>
+						<label><input type="radio" name="provoteryes" id="cp" value=""> CP </label>
+					</div>
+					<div id="noProbox" style="margin-left:-85px;">
+						<label><input type="radio" name="provoterNo" value=""> DP </label>
+						<label><input type="text" name="provoterNoOther" list="provoterNoOtherList">
+							<datalist id="provoterNoOtherList">
+    							<option value="A">
+    							<option value="B">
+							</datalist> Other </label>
+					</div>
 					<%}else{%>
 					<label class="radio-inline">
 						<input type="radio" name="radiobtn" id="radiobtn1" value="" > Yes
@@ -244,6 +258,11 @@ function updateEMSAjax(votorId){
 					<label class="radio-inline">
 						<input type="radio" name="radiobtn" id="radiobtn2" value="<%=ems.getProVoter() %>" checked> No
 					</label>
+					
+					<div id="yesProbox" style="margin-left:-85px;">
+						<label><input type="radio"  name="provoteryes" id="pm" value=""> PM </label>
+						<label><input type="radio" name="provoteryes" id="cp" value=""> CP </label>
+					</div>
 					<%}%>
 				</div>
 			</div>

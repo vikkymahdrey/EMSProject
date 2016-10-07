@@ -31,7 +31,7 @@ public class EMSController{
 		
 	@RequestMapping(value= {"/"}, method=RequestMethod.GET)
 	public ModelAndView showIndexPage(){
-		logger.debug("Default URL as '/'");
+		logger.debug("Default URL as a '/'");
 		return new ModelAndView("AuthPage");
 	}
 	
